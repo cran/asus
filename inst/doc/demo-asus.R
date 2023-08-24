@@ -1,4 +1,4 @@
-## ----fig1, fig.height = 4, fig.width = 6, fig.align = "center"-----------
+## ----fig1, fig.height = 4, fig.width = 6, fig.align = "center"----------------
 # Parameter of interest
 n<-500
 set.seed(42)
@@ -29,14 +29,14 @@ out<- sureshrink.mse(u,v.u)
 mse.ss<- out$sure.est
 t.ss<- out$t
 
-## ----fig2, fig.height = 4, fig.width = 6, fig.align = "center"-----------
+## ----fig2, fig.height = 4, fig.width = 6, fig.align = "center"----------------
 # EJS estimator of theta
 theta.ejs<- ejs(u,v.u)
 
 plot(1:n,theta,pch=19,ylab ="theta and theta.ejs in green")
 points(1:n,theta.ejs,col="green",pch=19)
 
-## ----fig3, fig.height = 4, fig.width = 6, fig.align = "center"-----------
+## ----fig3, fig.height = 4, fig.width = 6, fig.align = "center"----------------
 # side information on theta
 s<- abs(x+y) 
 out<- asus(u,v.u,s)
@@ -57,7 +57,7 @@ t.asus<- out$t
 # Group sizes
 n.asus<- out$size
 
-## ----fig4, fig.height = 4, fig.width = 6, fig.align = "center"-----------
+## ----fig4, fig.height = 4, fig.width = 6, fig.align = "center"----------------
 
 i1<- (s<=tau)
 i2<-(s>tau)
